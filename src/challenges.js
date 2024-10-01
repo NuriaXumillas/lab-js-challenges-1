@@ -119,7 +119,25 @@ const duplicateWords = [
   "bring",
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(array) {
+  let arrWithoutReps = []
+
+  if(array.length === 0){
+    return null
+  }
+  for (let i = 0; i < array.length; i++) {
+    if(!arrWithoutReps.includes(array[i])){
+      arrWithoutReps.push(array[i])
+    }
+  }
+
+  if(array == arrWithoutReps){
+    return arrWithoutReps
+  }
+
+  return arrWithoutReps
+
+}
 
 // Bonus: Iteration 6 | Product of Adjacent Numbers
 const matrix = [
